@@ -47,7 +47,7 @@ export default function InternshipDetails() {
     formData.append("internshipTitle", internship.title);
 
     try {
-      const res = await axios.post("http://localhost:5000/upload", formData);
+      const res = await axios.post("https://internnet-fixed.onrender.com/upload", formData);
       setUploadMsg(res.data.message);
     } catch (err) {
       console.error("Upload error:", err);
